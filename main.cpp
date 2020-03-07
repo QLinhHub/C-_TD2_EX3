@@ -81,6 +81,7 @@ int main()
     complex<double> d(6.7, 4.7);
     Matrice2x2<complex<double>> m(a, b, c, d);
     Matrice2x2<complex<double>> m1(complex<double> (2.0, 2.0), complex<double> (2.0, 2.0), complex<double> (2.0, 2.0), complex<double> (2.0, 2.0));
-    cout << m1*3 << endl;
+    //cout << m1*3 << endl; // multiplie and divise don't work
+    cout << m1 + m << endl;
     return 0;
 }
