@@ -1,4 +1,5 @@
-#include<iostream>
+#include <iostream>
+#include <complex>
 
 using namespace std;
 
@@ -72,8 +73,14 @@ template<typename T> Matrice2x2<T> Matrice2x2<T>::operator / (const float f) con
 
 int main()
 {
-    Matrice2x2<int> m(1, 2, 3, 4);
-    Matrice2x2<int> m1(2, 3, 4, 5);
-    cout << m/3 << endl;
+    // Matrice2x2<int> m(1, 2, 3, 4);
+    // Matrice2x2<int> m1(2, 3, 4, 5);
+    complex<double> a(2.0, 5.0);
+    complex<double> b(3.0, 2.3);
+    complex<double> c(3.2, 4.2);
+    complex<double> d(6.7, 4.7);
+    Matrice2x2<complex<double>> m(a, b, c, d);
+    Matrice2x2<complex<double>> m1(complex<double> (2.0, 2.0), complex<double> (2.0, 2.0), complex<double> (2.0, 2.0), complex<double> (2.0, 2.0));
+    cout << m1*3 << endl;
     return 0;
 }
