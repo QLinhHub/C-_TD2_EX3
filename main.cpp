@@ -59,10 +59,19 @@ template<typename T> Matrice2x2<T> Matrice2x2<T>::operator * (const float f) con
     return M_mul;
 }
 
+template<typename T> Matrice2x2<T> Matrice2x2<T>::operator / (const float f) const{
+    Matrice2x2 M_div;
+    M_div.a = a/f;
+    M_div.b = b/f;
+    M_div.c = c/f;
+    M_div.d = d/f;
+    return M_div;
+}
+
 int main()
 {
     Matrice2x2<int> m(1, 2, 3, 4);
     Matrice2x2<int> m1(2, 3, 4, 5);
-    cout << m*3 << endl;
+    cout << m/3 << endl;
     return 0;
 }
