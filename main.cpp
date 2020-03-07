@@ -68,6 +68,8 @@ template<typename T> Matrice2x2<T> Matrice2x2<T>::operator / (const float f) con
     return M_div;
 }
 
+//Hello Word!!
+
 int main()
 {
     Matrice2x2<int> m(1, 2, 3, 4);
